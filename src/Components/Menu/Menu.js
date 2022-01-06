@@ -37,7 +37,7 @@ const StyledMenuBox = styled.div`
   height: 100%;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 3;
   display: ${(props) => (props.menuToggle ? "flex" : "none")};
   flex-direction: row;
   align-items: flex-start;

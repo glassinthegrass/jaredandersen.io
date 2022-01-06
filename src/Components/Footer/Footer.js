@@ -44,6 +44,7 @@ text-align:left;
 const FooterSubtitle=styled.p`
 padding-left:1.5rem;
 padding-right:1.5rem;
+white-space:normal;
 font-size:15px;
 text-align:left;
 width:calc(100% - 3rem);

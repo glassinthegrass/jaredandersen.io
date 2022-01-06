@@ -9,7 +9,7 @@ export const Header = ({ handleMenu,handleNavigation, highlight }) => (
     <MenuBar />
     </MenuIcon>
     <Headline onClick={() => handleNavigation("hero")}>
-      jaredandersen.io
+      Jared Andersen
     </Headline>
     <LinkBox>
 
@@ -71,10 +71,11 @@ const MenuIcon = styled.span`
   cursor:pointer;
 `;
 const MenuBar=styled.div`
-height:0.2rem;
+height:0.3rem;
 width:100%;
 margin:1px;
 background-color:rgb(234,234,234);
+border-radius:50px 50px 50px 50px;
 `
 
 const LinkBox = styled.span`

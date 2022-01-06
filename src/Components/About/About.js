@@ -43,4 +43,5 @@ white-space:normal;
 const StyledContactMe=styled(StyledText)`
 text-align:center;
 padding:0;
+cursor:pointer;
 `
