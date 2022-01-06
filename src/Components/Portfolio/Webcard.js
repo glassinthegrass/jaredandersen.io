@@ -28,7 +28,6 @@ background-color:rgb(69,91,116);
 border-radius:10px 10px 10px 10px;
 `
 const StyledBox=styled.span`
-
 display:flex;
 flex-direction:column;
 justify-content:flex-start;
@@ -49,7 +48,7 @@ font-size:14px;
 white-space:normal;
 `
 const SiteLink=styled(StyledDescription)`
-font-size:20px;
+font-size:18px;
 text-decoration:none;
 color:rgb(234,234,234);
 `

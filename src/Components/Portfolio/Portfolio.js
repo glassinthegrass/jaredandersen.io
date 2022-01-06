@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Webcard } from './Webcard';
-import gather from '../../Gather.png'
-import oneup from '../../oneup.png'
-import currency from '../../currency-convert.png'
+import gather from '../../public/Gather.png'
+import oneup from '../../public/oneup.png'
+import currency from '../../public/currency-convert.png'
 export const Portfolio=()=>{
 return <StyledPortfolio id='portfolio'>
     <PortfolioTitleDiv>
