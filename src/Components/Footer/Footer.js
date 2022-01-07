@@ -25,12 +25,16 @@ export const Footer = ({ handleNavigation }) => (
 );
 
 const StyledFooter = styled.div`
-  width: calc(100vw - 2rem);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: rgb(69, 91, 116);
-  padding: 1rem;
+display: flex;
+width: calc(100vw - 2rem);
+background-color: rgb(69, 91, 116);
+padding: 1rem;
+flex-direction:column;
+@media (min-width: 550px) {
+    flex-direction:row;
+    justify-content: center;
+    align-items: flex-start;
+}
 `;
 const FooterBox = styled.span`
   width: 50%;
@@ -47,6 +51,7 @@ const FooterTitle = styled.h3`
   text-align: left;
 `;
 const FooterSubtitle = styled.p`
+
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   white-space: normal;
@@ -55,4 +60,5 @@ const FooterSubtitle = styled.p`
   width: calc(100% - 3rem);
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  cursor:pointer;
 `;
