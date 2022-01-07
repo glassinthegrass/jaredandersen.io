@@ -25,7 +25,10 @@ padding:1.5rem;
 padding-bottom:0;
 padding-top:1rem;
 background-color:rgb(69,91,116);
-border-radius:10px 10px 10px 10px;
+border-radius:5px;
+-webkit-box-shadow: 0 10px 6px -6px #777;
+-moz-box-shadow: 0 10px 6px -6px #777;
+     box-shadow: 0 10px 6px -6px #777;
 `
 const StyledBox=styled.span`
 display:flex;

@@ -13,7 +13,7 @@ export const Footer =({handleNavigation})=>(
             <FooterTitle>Site Map</FooterTitle>
             <FooterSubtitle onClick={()=>handleNavigation('about')}>About Me</FooterSubtitle>
             <FooterSubtitle onClick={()=>handleNavigation('portfolio')}>Portfolio</FooterSubtitle>
-            <FooterSubtitle onClick={()=>handleNavigation('resume')}>Experience</FooterSubtitle>
+            <FooterSubtitle onClick={()=>handleNavigation('experience')}>Experience</FooterSubtitle>
         </FooterBox>
         
     </StyledFooter>

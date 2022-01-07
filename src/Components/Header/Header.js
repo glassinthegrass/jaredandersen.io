@@ -33,7 +33,7 @@ const StyledHeader = styled.header`
     (props.highlight) 
       ? `background-color:rgb(69,91,116);  
       border-radius-bottom: 50%;
-    box-shadow: 0 0 50px rgb(234,234,234);`
+    box-shadow: 0 0 50px rgb(234,234,234,0.8);`
       : ""};
 
 `;
