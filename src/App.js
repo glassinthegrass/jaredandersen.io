@@ -31,7 +31,7 @@ const App = () => {
   const handleScrollTop = (e) => {
     +e.target.scrollTop > 150 ? setHighlight(true) : setHighlight(false);
   };
-  
+
   const handleMenu = () => {
     setMenuToggle(!menuToggle);
   };

@@ -36,10 +36,10 @@ const showMenu = keyframes`
 from{margin-left:-10rem;}
 to{margin-left:0;}
 `;
-const showAside =keyframes`
+const showAside = keyframes`
 from{background-color:rgb(234,234,234,0);}
 to{background-color:rgb(234,234,234,0.7);}
-`
+`;
 
 const StyledMenuBox = styled.div`
   width: 100vw;
@@ -47,11 +47,10 @@ const StyledMenuBox = styled.div`
   position: sticky;
   top: 0;
   z-index: 3;
-display:${ props=>props.menuToggle?'flex':'none'};
+  display: ${(props) => (props.menuToggle ? "flex" : "none")};
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-
 `;
 const MenuAside = styled.aside`
   display: flex;

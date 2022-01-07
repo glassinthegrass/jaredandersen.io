@@ -1,18 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Header = ({ handleMenu,handleNavigation, highlight }) => (
+export const Header = ({ handleMenu, handleNavigation, highlight }) => (
   <StyledHeader highlight={highlight}>
-    <MenuIcon onClick={handleMenu} >
-    <MenuBar />
-    <MenuBar />
-    <MenuBar />
+    <MenuIcon onClick={handleMenu}>
+      <MenuBar />
+      <MenuBar />
+      <MenuBar />
     </MenuIcon>
-    <Headline onClick={() => handleNavigation("hero")}>
-      Jared Andersen
-    </Headline>
+    <Headline onClick={() => handleNavigation("hero")}>Jared Andersen</Headline>
     <LinkBox>
-
       <Links onClick={() => handleNavigation("about")}>About me</Links>
       <Links onClick={() => handleNavigation("portfolio")}>Portfolio</Links>
       <Links onClick={() => handleNavigation("experience")}>Experience</Links>
@@ -30,12 +27,11 @@ const StyledHeader = styled.header`
   align-items: center;
   z-index: 1;
   ${(props) =>
-    (props.highlight) 
+    props.highlight
       ? `background-color:rgb(69,91,116);  
       border-radius-bottom: 50%;
     box-shadow: 0 0 50px rgb(234,234,234,0.8);`
       : ""};
-
 `;
 
 const Headline = styled.h1`
@@ -43,7 +39,7 @@ const Headline = styled.h1`
   padding: 0.5rem;
   width: 100%;
   margin: 0.5rem;
-  cursor:pointer;
+  cursor: pointer;
 `;
 const Links = styled.h6`
   font-size: 1em;
@@ -52,31 +48,31 @@ const Links = styled.h6`
   text-align: center;
   display: flex;
   align-items: center;
-cursor:pointer;
+  cursor: pointer;
 `;
 const MenuIcon = styled.span`
-  @media (min-width:550px) {
+  @media (min-width: 550px) {
     display: none;
   }
   height: calc(2rem - 1px);
-  width:2rem;
-  padding:0.5rem;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-around;
-  align-items:center;
-  background-color:rgb(69,91,116);
-  border-bottom:1px solid rgb(0,0,0);
-  border-right:1px solid rgb(0,0,0);
-  cursor:pointer;
+  width: 2rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(69, 91, 116);
+  border-bottom: 1px solid rgb(0, 0, 0);
+  border-right: 1px solid rgb(0, 0, 0);
+  cursor: pointer;
 `;
-const MenuBar=styled.div`
-height:0.3rem;
-width:100%;
-margin:1px;
-background-color:rgb(234,234,234);
-border-radius:50px 50px 50px 50px;
-`
+const MenuBar = styled.div`
+  height: 0.3rem;
+  width: 100%;
+  margin: 1px;
+  background-color: rgb(234, 234, 234);
+  border-radius: 50px 50px 50px 50px;
+`;
 
 const LinkBox = styled.span`
   @media (min-width: 550px) {
