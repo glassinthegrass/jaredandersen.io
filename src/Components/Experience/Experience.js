@@ -29,4 +29,5 @@ const Space = styled.span`
 const Framed = styled.iframe`
   width: 100%;
   height: 100%;
+  background-color:rgb(234,234,234);
 `;

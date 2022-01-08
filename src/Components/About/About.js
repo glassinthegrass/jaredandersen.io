@@ -6,7 +6,8 @@ export const About = ({ handleNavigation }) => (
     <StyledBox>
       <StyledText>Nice To Meet You!</StyledText>
       <StyledText>
-        I'm Jared Andersen, and I just moved to Maryville, TN! <br />
+        I'm Jared Andersen, and I just moved to Maryville, TN. <br />
+        I just graduated <a href='https://devmountain.com'>DevMountain</a> Web Development program. <br/>
         I love programming, as well as Hiking, taking photos of my dogs and
         learning new things!
         <br />

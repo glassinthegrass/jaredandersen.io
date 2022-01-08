@@ -3,7 +3,7 @@ import background from "./public/background.jpeg";
 import "./App.css";
 
 import styled from "styled-components";
-import { GlobalStyle } from "./GlobalStyle";
+import { GlobalStyle } from "./Style/GlobalStyle";
 import { Menu } from "./Components/Menu/Menu";
 import { Header } from "./Components/Header/Header";
 import { Footer } from "./Components/Footer/Footer";
@@ -12,7 +12,7 @@ import { Experience } from "./Components/Experience/Experience";
 import { Home } from "./Components/Home/Home";
 const App = () => {
   const [highlight, setHighlight] = useState(false);
-  const [id, setId] = useState("top");
+  const [id, setId] = useState("hero");
   const [menuToggle, setMenuToggle] = useState(false);
 
   const navigate = useNavigate();

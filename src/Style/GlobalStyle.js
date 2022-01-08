@@ -5,7 +5,7 @@ body {
   line-height:1.5;
 letter-spacing:1px;
 color: rgb(234,234,234);
-  font-family: Open-Sans, Helvetica, Sans-Serif;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 `

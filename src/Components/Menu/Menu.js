@@ -71,14 +71,14 @@ const Button = styled.h1`
   text-align: center;
   padding: 0.3rem;
   text-align: left;
-  cursor: pointer;
-`;
-const Box = styled.span`
+  `;
+  const Box = styled.span`
   display: flex;
   width: calc(100% - 2rem);
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  cursor: pointer;
 `;
 const Icon = styled.img`
   height: 2rem;
