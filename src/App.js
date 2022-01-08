@@ -35,20 +35,10 @@ const App = () => {
   const handleMenu = () => {
     setMenuToggle(!menuToggle);
   };
-
-  let navToggle = menuToggle ? (
-    <Menu
-      handleNavigation={handleNavigation}
-      handleMenu={handleMenu}
-      menuToggle={menuToggle}
-    />
-  ) : (
-    <Header
-      handleMenu={handleMenu}
-      highlight={highlight}
-      handleNavigation={handleNavigation}
-    />
-  );
+  const handleClick = (id) => {
+    handleMenu();
+    handleNavigation(id);
+  };
 
   const display = (
     <StyledApp
@@ -58,7 +48,14 @@ const App = () => {
       onScroll={(e) => handleScrollTop(e)}
     >
       <GlobalStyle />
-      {navToggle}
+      <Menu handleClick={handleClick} handleMenu={handleMenu} menuToggle={menuToggle} />
+      <Header
+        handleMenu={handleMenu}
+        highlight={highlight}
+        handleNavigation={handleNavigation}
+        menuToggle={menuToggle}
+      />
+
       <Routes>
         <Route
           path="/"
