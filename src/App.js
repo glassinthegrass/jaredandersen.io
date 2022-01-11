@@ -12,7 +12,7 @@ import { Experience } from "./Components/Experience/Experience";
 import { Home } from "./Components/Home/Home";
 const App = () => {
   const [highlight, setHighlight] = useState(false);
-  const [id, setId] = useState("hero");
+  const [id, setId] = useState("top");
   const [menuToggle, setMenuToggle] = useState(false);
 
   const navigate = useNavigate();
