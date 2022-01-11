@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import background from "./assets/background.jpeg";
+import background from "./assets/background.jpg";
 
 
 import styled from "styled-components";
