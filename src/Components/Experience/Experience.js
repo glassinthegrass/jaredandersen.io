@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import resume from "../../public/JaredAndersen-Resume.pdf";
+import resume from "../../assets/JaredAndersen-Resume.pdf";
 export const Experience = () => {
   useEffect(() => {
     const x = document.querySelector(`#resume`);

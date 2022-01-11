@@ -1,16 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { Webcard } from "./Webcard";
-import gather from "../../public/Gather.png";
-import oneup from "../../public/oneup.png";
-import currency from "../../public/currency-convert.png";
-export const Portfolio = () => {
-  return (
+import gather from "../../assets/Gather.png";
+import oneup from "../../assets/oneup.png";
+import currency from "../../assets/currency-convert.png";
+import { PortaHeader } from "./PortaHeader";
+export const Portfolio = () => (
     <StyledPortfolio id="portfolio">
-      <PortfolioTitleDiv>
-        <Title>Portfolio</Title>
-      </PortfolioTitleDiv>
-
+        <PortaHeader title='Portfolio'/>
       <PortfolioMain>
         <Webcard
           icon={gather}
@@ -38,7 +35,7 @@ Targeted toward single people over 18, that want to chat and date fellow geeky p
       </PortfolioMain>
     </StyledPortfolio>
   );
-};
+
 
 const StyledPortfolio = styled.section`
   width: 100vw;
@@ -46,16 +43,7 @@ const StyledPortfolio = styled.section`
   display: flex;
   flex-direction: column;
 `;
-const PortfolioTitleDiv = styled.div`
-  width: 100vw;
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-const Title = styled.h1`
-  font-size: 60px;
-`;
+
 const PortfolioMain = styled.div`
   width: calc(100vw - 6rem);
   background-color: rgb(234, 234, 234);

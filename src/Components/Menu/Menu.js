@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import me from "../../public/aboutme.png";
-import portfolio from "../../public/portfolio.png";
-import experience from "../../public/experience.png";
+import me from "../../assets/aboutme.png";
+import portfolio from "../../assets/portfolio.png";
+import experience from "../../assets/experience.png";
 import { Button } from "./Button";
 
 export const Menu = ({ menuToggle, handleClick,handleMenu }) => (

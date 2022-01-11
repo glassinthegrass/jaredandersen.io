@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import background from "./public/background.jpeg";
-import "./App.css";
+import background from "./assets/background.jpeg";
+
 
 import styled from "styled-components";
 import { GlobalStyle } from "./Style/GlobalStyle";
@@ -75,7 +75,7 @@ export default App;
 const StyledApp = styled.main`
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
     url(${background});
   background-position: center;
   background-repeat: no-repeat;

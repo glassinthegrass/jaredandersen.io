@@ -1,5 +1,5 @@
 import React from "react";
-import me from "../../public/me.jpeg";
+import me from "../../assets/me.jpeg";
 import styled from "styled-components";
 
 export const Hero = () => (
