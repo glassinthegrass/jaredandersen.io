@@ -81,9 +81,11 @@ border-radius:4px;
 font-size:15px;
 font-weight:bold;
 letter-spacing:1.25px;
-color:rgb(69, 91, 116);
-  text-shadow: -0.5px -0.5px 0 rgb(234, 234, 234), 0.5px -0.5px 0 rgb(234, 234, 234),
-    -0.5px 0.5px 0 rgb(234, 234, 234), 0.5px 0.5px 0 rgb(234, 234, 234);
+color:rgb(234,234,234);
+    text-shadow: -0.5px -0.5px 0 rgb(88,88,88), 0.5px -0.5px 0 rgb(88,88,88),
+    -0.5px 0.5px 0 rgb(88,88,88), 0.5px 0.5px 0 rgb(88,88,88);
+
+}
 &:hover{
 
 color:rgb(234,234,234);
@@ -94,9 +96,12 @@ text-shadow: -0.5px -0.5px 0 rgb(69,91,116), 0.5px -0.5px 0 rgb(69,91,116),
   color:rgb(69,91,116);
   background-color:rgb(234,234,234);
 }
-@media(min-width:400px){
+@media(min-width:500px){
   font-size:18px;
   letter-spacing:2px;
+  color:rgb(69, 91, 116);
+  text-shadow: -0.5px -0.5px 0 rgb(234, 234, 234), 0.5px -0.5px 0 rgb(234, 234, 234),
+    -0.5px 0.5px 0 rgb(234, 234, 234), 0.5px 0.5px 0 rgb(234, 234, 234);
 }
 
 `
