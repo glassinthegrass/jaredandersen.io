@@ -32,7 +32,7 @@ const StyledWebCard = styled.span`
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
-  padding-bottom: 0;
+  padding-bottom: 0.5rem;
   padding-top: 1rem;
   background-color: rgb(69, 91, 116);
   border-radius: 5px;
@@ -61,12 +61,35 @@ const StyledDescription = styled(StyledName)`
   white-space: normal;
 `;
 const SiteLink = styled(StyledDescription)`
+width:calc(100% - 6px);
   font-size: 22px;
   text-decoration: none;
-  color: rgb(234, 234, 234);
+
+padding-left:3px;
+padding-right3px;
+font-weight:bold;
+border-radius:4px;
+color:rgb(69, 91, 116);
+  text-shadow: -0.5px -0.5px 0 rgb(234, 234, 234), 0.5px -0.5px 0 rgb(234, 234, 234),
+    -0.5px 0.5px 0 rgb(234, 234, 234), 0.5px 0.5px 0 rgb(234, 234, 234);
+&:hover{
+
+color:rgb(234,234,234);
+text-shadow: -0.5px -0.5px 0 rgb(69,91,116), 0.5px -0.5px 0 rgb(69,91,116),
+    -0.5px 0.5px 0 rgb(69,91,116), 0.5px 0.5px 0 rgb(69,91,116);
+};
+&:active{
+  color:rgb(69,91,116);
+  background-color:rgb(234,234,234);
+}
 `;
 
 const SiteSource = styled(SiteLink)`
   font-size: 12px;
-  padding-bottom:3px;
+  color:rgb(69, 91, 116);
+border-radius:4px;
+letter-spacing:2px;
+color:rgb(69, 91, 116);
+text-shadow: -0.7px -0.7px 0 rgb(234, 234, 234), 0.7px -0.7px 0 rgb(234, 234, 234),
+  -0.7px 0.7px 0 rgb(234, 234, 234), 0.7px 0.7px 0 rgb(234, 234, 234);
 `;

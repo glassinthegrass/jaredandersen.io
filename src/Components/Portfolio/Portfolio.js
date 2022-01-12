@@ -13,7 +13,7 @@ export const Portfolio = () => (
           icon={gather}
           siteName="Gather"
           siteDescription=' A website that allows users to "register" unregistered “people” to groups, where users comment to them.
-Targeted families with younger children aren\’t ready for social media, but want them to receive birthday messages.'
+Targeted families with younger children aren’t ready for social media, but want them to receive birthday messages.'
           siteUrl="https://gather.jaredandersen.io"
           githubUrl={"https://github.com/glassinthegrass/gather"}
         />
