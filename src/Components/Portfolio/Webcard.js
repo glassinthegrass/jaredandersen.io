@@ -19,7 +19,7 @@ export const Webcard = ({
         Visit Website
       </SiteLink>
       <SiteSource as="a" target="_blank" rel="noopener" href={githubUrl}>
-        Site Source Code
+        View Sites Github
       </SiteSource>
     </StyledBox>
   </StyledWebCard>
@@ -61,11 +61,12 @@ const StyledDescription = styled(StyledName)`
   white-space: normal;
 `;
 const SiteLink = styled(StyledDescription)`
-  font-size: 18px;
+  font-size: 22px;
   text-decoration: none;
   color: rgb(234, 234, 234);
 `;
 
 const SiteSource = styled(SiteLink)`
-  font-size: 8px;
+  font-size: 12px;
+  padding-bottom:3px;
 `;

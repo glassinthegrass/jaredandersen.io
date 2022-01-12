@@ -40,6 +40,8 @@ const App = () => {
     handleNavigation(id);
   };
 
+const fullDate = new Date();
+
   const display = (
     <StyledApp
       id="top"
@@ -63,7 +65,7 @@ const App = () => {
         />
         <Route path="/experience" element={<Experience />} />
       </Routes>
-      <Footer handleNavigation={handleNavigation} />
+      <Footer handleNavigation={handleNavigation} fullDate={fullDate}/>
     </StyledApp>
   );
 
