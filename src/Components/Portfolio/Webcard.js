@@ -1,107 +1,20 @@
 import React from "react";
-import styled from "styled-components";
+import {StyledWebCard,StyledBox,StyledIcon,StyledName,StyledDescription,StyledLinkBox,StyledLink,StyledSource} from "./portfolioStyles";
 
-export const Webcard = ({
-  icon,
-  siteName,
-  siteDescription,
-  siteUrl,
-  githubUrl,
-}) => (
+export const Webcard = ({icon,siteName,siteDescription,siteUrl,githubUrl,}) => (
   <StyledWebCard>
     <StyledBox>
       <StyledIcon src={icon} alt={siteName} />
       <StyledName>{siteName}</StyledName>
       <StyledDescription as="h6">{siteDescription}</StyledDescription>
     </StyledBox>
-    <StyledBox>
-      <SiteLink as="a" target="_blank" rel="noopener" href={siteUrl}>
+    <StyledLinkBox>
+      <StyledLink as="a" target="_blank" rel="noopener" href={siteUrl}>
         Visit Website
-      </SiteLink>
-      <SiteSource as="a" target="_blank" rel="noopener" href={githubUrl}>
+      </StyledLink>
+      <StyledSource as="a" target="_blank" rel="noopener" href={githubUrl}>
         View Sites Github
-      </SiteSource>
-    </StyledBox>
+      </StyledSource>
+    </StyledLinkBox>
   </StyledWebCard>
 );
-const StyledWebCard = styled.span`
-  width: 275px;
-  height: 375px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem;
-  padding-bottom: 0.5rem;
-  padding-top: 1rem;
-  background-color: rgb(69, 91, 116);
-  border-radius: 5px;
-  -webkit-box-shadow: 0 10px 6px -6px #777;
-  -moz-box-shadow: 0 10px 6px -6px #777;
-  box-shadow: 0 10px 6px -6px #777;
-`;
-const StyledBox = styled.span`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-`;
-const StyledIcon = styled.img`
-  height: 100px;
-  margin: 1rem;
-  background-color: rgb(234, 234, 234);
-`;
-const StyledName = styled.h3`
-  width: 100%;
-  font-size: 30px;
-`;
-const StyledDescription = styled(StyledName)`
-  font-size: 14px;
-  white-space: normal;
-`;
-const SiteLink = styled(StyledDescription)`
-width:calc(100% - 6px);
-  font-size: 22px;
-  text-decoration: none;
-
-padding-left:3px;
-padding-right3px;
-font-weight:bold;
-border-radius:4px;
-color:rgb(234,234,234);
-  text-shadow: -0.5px -0.5px 0 rgb(88,88,88), 0.5px -0.5px 0 rgb(88,88,88),
-    -0.5px 0.5px 0 rgb(88,88,88), 0.5px 0.5px 0 rgb(88,88,88);
-&:hover{
-
-color:rgb(234,234,234);
-text-shadow: -0.5px -0.5px 0 rgb(69,91,116), 0.5px -0.5px 0 rgb(69,91,116),
-    -0.5px 0.5px 0 rgb(69,91,116), 0.5px 0.5px 0 rgb(69,91,116);
-};
-&:active{
-  color:rgb(69,91,116);
-  background-color:rgb(234,234,234);
-}
-@media(min-width:500px){
-  letter-spacing:2px;
-  color:rgb(69, 91, 116);
-  text-shadow: -0.5px -0.5px 0 rgb(234, 234, 234), 0.5px -0.5px 0 rgb(234, 234, 234),
-    -0.5px 0.5px 0 rgb(234, 234, 234), 0.5px 0.5px 0 rgb(234, 234, 234);
-}
-`;
-
-const SiteSource = styled(SiteLink)`
-  font-size: 12px;
-  color:rgb(69, 91, 116);
-border-radius:4px;
-letter-spacing:2px;
-color:rgb(234,234,234);
-text-shadow: -0.7px -0.7px 0 rgb(88,88,88), 0.7px -0.7px 0 rgb(88,88,88),
-  -0.7px 0.7px 0 rgb(88,88,88), 0.7px 0.7px 0 rgb(88,88,88);
-  @media(min-width:500px){
-    color:rgb(69, 91, 116);
-    text-shadow: -0.7px -0.7px 0 rgb(88,88,88), 0.7px -0.7px 0 rgb(88,88,88),
-      -0.7px 0.7px 0 rgb(88,88,88), 0.7px 0.7px 0 rgb(88,88,88);
-  }
-  
-`;

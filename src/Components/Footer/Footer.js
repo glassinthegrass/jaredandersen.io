@@ -1,20 +1,16 @@
 import React from "react";
-import { StyledFooter } from "./styles";
+import { StyledFooter } from "./footerStyles";
 import { Contact } from "./Contact";
 import { Copyright } from "./Copyright";
 import { SiteMap } from "./SiteMap";
-import {MovingBox} from './styles'
+import { StyledMovingBox } from "./footerStyles";
 
-export const Footer = ({ handleNavigation,fullDate }) => (
+export const Footer = ({ handleNavigation, fullDate }) => (
   <StyledFooter id="footer">
-<MovingBox>
-
-    <Contact/>
-   <SiteMap handleNavigation={handleNavigation}/>
-</MovingBox>
-   <Copyright fullDate={fullDate}/>
-
+    <StyledMovingBox>
+      <Contact />
+      <SiteMap handleNavigation={handleNavigation} />
+    </StyledMovingBox>
+    <Copyright fullDate={fullDate} />
   </StyledFooter>
 );
-
-

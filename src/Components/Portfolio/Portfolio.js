@@ -1,14 +1,14 @@
 import React from "react";
-import styled from "styled-components";
 import { Webcard } from "./Webcard";
+import { SubHeader } from "./SubHeader";
+import { StyledPortfolio,StyledMain } from "./portfolioStyles";
 import gather from "../../assets/Gather.png";
 import oneup from "../../assets/oneup.png";
 import currency from "../../assets/currency-convert.png";
-import { PortaHeader } from "./PortaHeader";
 export const Portfolio = () => (
     <StyledPortfolio id="portfolio">
-        <PortaHeader title='Portfolio'/>
-      <PortfolioMain>
+        <SubHeader title='Portfolio'/>
+      <StyledMain>
         <Webcard
           icon={gather}
           siteName="Gather"
@@ -32,26 +32,6 @@ Targeted toward single people over 18, that want to chat and date fellow geeky p
           siteUrl="https://currency-convert.jaredandersen.io"
           githubUrl={"https://github.com/glassinthegrass/currency-convert"}
         />
-      </PortfolioMain>
+      </StyledMain>
     </StyledPortfolio>
   );
-
-
-const StyledPortfolio = styled.section`
-  width: 100vw;
-
-  display: flex;
-  flex-direction: column;
-`;
-
-const PortfolioMain = styled.div`
-  width: calc(100vw - 6rem);
-  background-color: rgb(234, 234, 234);
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 3rem;
-  padding-top: 4rem;
-`;

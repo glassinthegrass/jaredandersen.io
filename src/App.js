@@ -1,21 +1,26 @@
+//modules
 import React, { useState } from "react";
-import background from "./assets/background.jpg";
-
-
-import styled from "styled-components";
-import { GlobalStyle } from "./Style/GlobalStyle";
-import { Menu } from "./Components/Menu/Menu";
-import { Header } from "./Components/Header/Header";
-import { Footer } from "./Components/Footer/Footer";
 import { Routes, Route, useNavigate } from "react-router-dom";
+//Components
+import { Header } from "./Components/Header/Header";
+import { Menu } from "./Components/Menu/Menu";
+import { Hero } from "./Components/Hero/Hero";
+import { About } from "./Components/About/About";
+import { Portfolio } from "./Components/Portfolio/Portfolio";
 import { Experience } from "./Components/Experience/Experience";
-import { Home } from "./Components/Home/Home";
+import { Footer } from "./Components/Footer/Footer";
+
+//styled-components
+import { StyledApp } from "./styles/StyledApp";
+
+//start
 const App = () => {
   const [highlight, setHighlight] = useState(false);
   const [id, setId] = useState("top");
   const [menuToggle, setMenuToggle] = useState(false);
 
   const navigate = useNavigate();
+
   const handleNavigation = (id) => {
     if (id === "experience") {
       setId(id);
@@ -40,7 +45,7 @@ const App = () => {
     handleNavigation(id);
   };
 
-const fullDate = new Date();
+  const fullDate = new Date();
 
   const display = (
     <StyledApp
@@ -49,23 +54,32 @@ const fullDate = new Date();
       tabindex="0"
       onScroll={(e) => handleScrollTop(e)}
     >
-      <GlobalStyle />
-      <Menu handleClick={handleClick} handleMenu={handleMenu} menuToggle={menuToggle} />
+      <Menu
+        handleClick={handleClick}
+        handleMenu={handleMenu}
+        menuToggle={menuToggle}
+      />
       <Header
         handleMenu={handleMenu}
         highlight={highlight}
         handleNavigation={handleNavigation}
         menuToggle={menuToggle}
       />
-
+      
       <Routes>
         <Route
           path="/"
-          element={<Home id={id} handleNavigation={handleNavigation} />}
+          element={
+            <React.Fragment>
+              <Hero handleNavigation={handleNavigation} id={id} />
+              <About handleNavigation={handleNavigation} />
+              <Portfolio />
+            </React.Fragment>
+          }
         />
         <Route path="/experience" element={<Experience />} />
       </Routes>
-      <Footer handleNavigation={handleNavigation} fullDate={fullDate}/>
+      <Footer handleNavigation={handleNavigation} fullDate={fullDate} />
     </StyledApp>
   );
 
@@ -73,15 +87,3 @@ const fullDate = new Date();
 };
 
 export default App;
-
-const StyledApp = styled.main`
-  width: 100vw;
-  height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
-    url(${background});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  overflow: ${(props) => (props.menuToggle ? "hidden" : "auto")};
-`;

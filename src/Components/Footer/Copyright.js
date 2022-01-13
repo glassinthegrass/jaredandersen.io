@@ -1,9 +1,9 @@
 import React from "react";
-import { CopyStrip, CopyTitle, StyledLink } from "./styles";
+import { StyledCopyStrip, StyledCopyTitle, StyledLink } from "./footerStyles";
 export const Copyright = ({ fullDate }) => (
-  <CopyStrip>
-    <CopyTitle>© 2021-{fullDate.getFullYear()} Jared Andersen</CopyTitle>
-    <CopyTitle>
+  <StyledCopyStrip>
+    <StyledCopyTitle>© 2021-{fullDate.getFullYear()} Jared Andersen</StyledCopyTitle>
+    <StyledCopyTitle>
       <StyledLink
         target="_blank"
         rel="noreferrer"
@@ -11,6 +11,6 @@ export const Copyright = ({ fullDate }) => (
       >
         View sites Github
       </StyledLink>
-    </CopyTitle>
-  </CopyStrip>
+    </StyledCopyTitle>
+  </StyledCopyStrip>
 );

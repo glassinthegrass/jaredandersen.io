@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { StyledHeader,StyledNavBox } from "./headerStyles";
 import { MenuIcon } from "./MenuIcon";
 import { NavLink } from "./NavLink";
 export const Header = ({handleMenu, menuToggle, handleNavigation, highlight}) => (
@@ -11,7 +11,7 @@ export const Header = ({handleMenu, menuToggle, handleNavigation, highlight}) =>
       id={"hero"}
       title="Jared Andersen"
     />
-    <NavBox>
+    <StyledNavBox>
       <NavLink
         fontSize="16"
         handleClick={handleNavigation}
@@ -30,32 +30,7 @@ export const Header = ({handleMenu, menuToggle, handleNavigation, highlight}) =>
         id={"experience"}
         title="Experience"
       />
-    </NavBox>
+    </StyledNavBox>
   </StyledHeader>
 );
 
-const StyledHeader = styled.header`
-  position: sticky;
-  top: 0;
-  height: 3rem;
-  width: 100%;
-  display: ${(props) => (props.menuToggle ? "none" : "flex")};
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1;
-  ${(props) =>
-    props.highlight
-      ? `background-color:rgb(69,91,116);  
-      border-radius-bottom: 50%;
-    box-shadow: 0 0 50px rgb(234,234,234,0.8);`
-      : ''};
-`;
-
-const NavBox = styled.nav`
-display: none;
-  @media (min-width: 550px) {
-    padding-right: 1rem;
-    height: 3rem;
-    display: flex;
-  }
-`;
