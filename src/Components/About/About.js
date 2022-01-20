@@ -21,8 +21,7 @@ export const About = ({ handleNavigation }) => (
           </StyledLink>{` Web Development program.`}
         </StyledText>
         <StyledText>
-          I love programming, as well as Hiking, taking photos of my dogs and
-          learning new things!
+          I love programming, Hiking, taking photos of my dogs!
         </StyledText>
         <StyledText>
           Feel free to get in touch or take a look at my past work below.
