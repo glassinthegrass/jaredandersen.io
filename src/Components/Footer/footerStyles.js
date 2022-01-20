@@ -19,7 +19,7 @@ export const StyledFooter = styled.div`
   `,
   StyledFooterTitle = styled.h3`
     padding: 0.5rem;
-    font-size: 28px;
+    font-size: 26px;
     font-weight:600;
     width: calc(100% - 1rem);
     text-align: left;
@@ -74,15 +74,15 @@ export const StyledFooter = styled.div`
   `,
   StyledEmail = styled(ExternalButton)`
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
     letter-spacing: 1px;
     font-size: 15px;
     @media (min-width: 400px) {
       letter-spacing: 1.5px;
-      font-size: 17px;
+      font-size: 16px;
     }
     @media (min-width: 500px) {
-      font-size: 20px;
+      font-size: 18px;
       letter-spacing: 1.75px;
       font-weight:600;
     }
