@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { InternalButton } from "../../styles/BaseComponents";
 export const StyledHeader = styled.header`
     position: sticky;
     top: 0;
@@ -18,8 +19,9 @@ export const StyledHeader = styled.header`
   StyledNavBox = styled.nav`
     display: none;
     @media (min-width: 550px) {
-      padding-right: 1rem;
-      height: 3rem;
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+height:100%;
       display: flex;
     }
   `,
@@ -46,13 +48,35 @@ export const StyledHeader = styled.header`
     background-color: rgb(234, 234, 234);
     border-radius: 50px 50px 50px 50px;
   `,
-  StyledLink = styled.h6`
-    font-size: ${(props) => props.fontSize ?? 12}px;
-    padding: 0.5rem;
+  StyledTitleBox= styled.div`
+
+  width:100%;
+  display:flex;
+  align-items:center
+  justify-content:flex-start;
+  height:100%;
+  `,
+  StyledTitleLink=styled(InternalButton)`
+display:flex;
+align-items:center;
+  padding: 1rem;
+  margin:0.3rem;
+font-size:22px;
+  border-radius:10px;
+  border:1px solid rgb(234,234,234,0);
+  &:active{
+    border:1px solid rgb(0,0,0,0);
+    background-color:rgb(0,0,0,0);
+  }
+  `,
+  StyledLink = styled(InternalButton)`
+    font-size: 16px;
+          padding: 0.5rem;
     margin: 0.5rem;
-    text-align: center;
     display: flex;
     align-items: center;
     cursor: pointer;
     width: 100%;
+    border:none;
+    border:1px solid rgb(234,234,234,0);
   `;
