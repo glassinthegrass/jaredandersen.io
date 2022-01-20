@@ -1,5 +1,5 @@
 //modules
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 //Components
 import { Header } from "./Components/Header/Header";
@@ -16,40 +16,42 @@ import { StyledApp } from "./styles/StyledApp";
 //start
 const App = () => {
   const [highlight, setHighlight] = useState(false);
-  const [id, setId] = useState("top");
   const [menuToggle, setMenuToggle] = useState(false);
-
+const [to,setTo]=useState('hero');
   const navigate = useNavigate();
+  const fullDate = new Date();
 
-  const handleNavigation = (id) => {
+  const handleNavigation = (id = 'hero') => {
     if (id === "experience") {
-      setId(id);
+      setTo(id);
       navigate(`/${id}`);
     } else {
+      setTo(id);
       navigate("/");
-      setId(id);
-      const x = document.querySelector(`#${id}`);
-      x.scrollIntoView({ behavior: "smooth" });
     }
   };
+useEffect(()=>{
+  const x = document.querySelector(`#${to}`);
+  x.scrollIntoView({ behavior: "smooth" });
+},[to])
 
   const handleScrollTop = (e) => {
-    +e.target.scrollTop > 150 ? setHighlight(true) : setHighlight(false);
+    Number(e.target.scrollTop) > 150 ? setHighlight(true) : setHighlight(false);
   };
 
   const handleMenu = () => {
     setMenuToggle(!menuToggle);
   };
-  const handleClick = (id) => {
-    handleMenu();
-    handleNavigation(id);
-  };
+  const handleClick = (toggle) => {
+    return (id)=>{
+      setMenuToggle(!toggle)
+      handleNavigation(id);
+    }
 
-  const fullDate = new Date();
+  };
 
   const display = (
     <StyledApp
-      id="top"
       menuToggle={menuToggle}
       tabindex="0"
       onScroll={(e) => handleScrollTop(e)}
@@ -65,13 +67,13 @@ const App = () => {
         handleNavigation={handleNavigation}
         menuToggle={menuToggle}
       />
-      
+
       <Routes>
         <Route
           path="/"
           element={
             <React.Fragment>
-              <Hero handleNavigation={handleNavigation} id={id} />
+              <Hero handleNavigation={handleNavigation} />
               <About handleNavigation={handleNavigation} />
               <Portfolio />
             </React.Fragment>
