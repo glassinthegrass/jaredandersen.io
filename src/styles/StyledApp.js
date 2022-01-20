@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import background from "../assets/background.jpg";
+
 export const StyledApp = styled.main`
   width: 100vw;
   height: 100vh;
