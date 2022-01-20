@@ -1,35 +1,35 @@
 import styled from "styled-components";
-import { ExternalButton } from "../../styles/BaseComponents";
+import { ExternalButton, InternalButton } from "../../styles/BaseComponents";
+
 export const StyledAbout = styled.section`
-    padding: 3rem;
-    width: (100vw - 6rem);
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background-color: rgb(69, 91, 116);
   `,
-  StyledBox = styled.span`
+  StyledBox = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 100%;
-    width: 90%;
+    width: 80%;
   `,
   StyledText = styled.p`
     text-align: left;
     width: 100%;
-    line-height: 1.3;
     letter-spacing: 1px;
     white-space: normal;
-    font-size: 20px;
+    font-size: 18px;
   `,
-  StyledContactMe = styled(ExternalButton)`
+  StyledContactMe = styled(InternalButton)`
     text-align: center;
-
-    font-size: 24px;
+    font-size: 18px;
     letter-spacing: 2px;
+    margin: 0.5rem;
+    padding: 0.5rem 2rem;
   `,
   StyledLink = styled(ExternalButton)`
     padding-left: 0;
@@ -40,4 +40,5 @@ export const StyledAbout = styled.section`
   StyledTitle = styled(StyledText)`
     padding: 1rem;
     width: calc(100% - 2rem);
+    font-size:22px;
   `;
